@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>Wheather App</h1>
+
+        <div class="tab-cont">
+            <p class="tab" data-userwhether>Your Wheather</p>
+            <p class="tab" data-searchWhether>Search Whether</p>
+        </div>
+
+        <div class="whether-cont">
+            <!-- Grant location -->
+            <div class="cont2 grant-location">
+                <img src="./location.png" width="80" height="80" loading="lazy">
+                <p>Grant Location Access</p>
+                <p>Allow Access to get whether Information</p>
+                <button class="btn" data-grant-access>Grant Access</button>
+            </div>
+
+            <!-- Search weather part -->
+            <form class="form-cont" data-search>
+                <input placeholder="search for city...." data-searchInput>
+                <button class="btn">
+                    <img src="search.png" class="btnn" width="25" height="25" loading="lazy">
+                </button>
+            </form>
+
+            <!-- Loading screen -->
+            <div class="cont2 loadingscreen">
+                <img src="loading.gif" width="150" height="150" loading="lazy">
+                <p>Loading</p>
+            </div>
+
+            <!-- Weather information -->
+            <div class=" user-info-container info">
+                <div class="name">
+                    <h2 data-cityname class="cityname">City Name</h2>
+                    <img class="img1" width="50px" data-countryIcon>
+                </div>
+
+                <p data-description class="desc">Clear sky</p>
+                <img  class="icons" width="70px" data-weather-icon>
+                <p class="tempertature" data-temp></p>
+
+                <div class="count three-cont">
+                    <div class="three-info">
+                        
+                        <img src="wind.png" width="70px" alt="">
+                        <p>Wind Speed</p>
+                        <p data-windSpeed></p>
+                    </div>
+                    <div class="three-info">
+                        <img src="humidity.png"   width="70px" alt="">
+                        <p>Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+                    <div class="three-info">
+                        <img src="cloud.png"   width="70px" alt="">
+                        <p>Clouds</p>
+                        <p data-pressure></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
